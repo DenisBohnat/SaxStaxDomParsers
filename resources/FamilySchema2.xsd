@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.myschema.by/FamilySchema" xmlns:xl="http://www.myschema.by/FamilySchema"
+	elementFormDefault="qualified">
+
+	<xs:complexType name="parent_type">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="surname" type="xs:string" />
+			<xs:element name="age" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="father_type">
+		<xs:sequence>
+			<xs:element name="parent" type="xl:parent_type"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="mother_type">
+		<xs:sequence>
+			<xs:element name="parent" type="xl:parent_type"></xs:element>
+			<xs:element name="maiden_name" type="xs:string" />
+			<xs:element name="children">
+				<xs:complexType>
+					<xs:attribute name="count" type="xs:int" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="family_type">
+		<xs:sequence>
+			<xs:element name="mother" type="xl:mother_type"></xs:element>
+			<xs:element name="father" type="xl:father_type"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="families_type">
+		<xs:sequence>
+			<xs:element name="family" type="xl:family_type" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="families" type="xl:families_type"></xs:element>
+
+</xs:schema>

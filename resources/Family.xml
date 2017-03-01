@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<families xmlns="http://www.myschema.by/FamilySchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.myschema.by/FamilySchema FamilySchema.xsd">
+	<family name="Ivanovy">
+		<mother>
+			<name>Sveta</name>
+			<maiden-name>Miranovich</maiden-name>
+			<surname>Barkun</surname>
+			<age>32</age>
+			<children count="3" />
+		</mother>
+		<father>
+			<name>Ivan</name>
+			<surname>Barkun</surname>
+			<age>36</age>
+		</father>
+	</family>
+	<family name="Petrovy">
+		<mother>
+			<name>Anna</name>
+			<maiden-name>Glukova</maiden-name>
+			<surname>Petrova</surname>
+			<age>28</age>
+			<children count="3" />
+		</mother>
+		<father>
+			<name>Ihar</name>
+			<surname>Petrov</surname>
+			<age>36</age>
+		</father>
+	</family>
+</families>
+
+
